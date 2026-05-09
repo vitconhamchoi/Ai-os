@@ -1,4 +1,14 @@
-# AI OS: Hệ điều hành AI theo góc nhìn 2025-2026
+# AI OS: Bộ tài liệu thực tế để xây và vận hành một hệ điều hành AI
+
+## Bộ tài liệu này gồm gì?
+
+File này giữ vai trò **tổng quan**. Phần đi sâu đã được tách thành các tài liệu tiếp theo:
+
+1. [`01-kien-truc-tham-chieu.md`](./01-kien-truc-tham-chieu.md): kiến trúc tham chiếu, thành phần, luồng xử lý, boundary và quyết định triển khai
+2. [`02-lo-trinh-xay-dung.md`](./02-lo-trinh-xay-dung.md): lộ trình dựng MVP đến production, cấu trúc repo, stack, backlog và mốc bàn giao
+3. [`03-van-hanh-va-su-dung.md`](./03-van-hanh-va-su-dung.md): cách dùng AI OS trong thực tế, quy trình vận hành, kiểm soát, đo lường và runbook
+
+Nếu mục tiêu là biến repo này thành nền tảng tài liệu để **xây thật**, nên đọc theo thứ tự 1 → 2 → 3.
 
 ## 1. AI OS hiện nay được hiểu là gì?
 
@@ -225,13 +235,18 @@ Ai làm tốt ba phần này sẽ có lợi thế lớn trong việc xây sản 
 
 ---
 
-## 6. Định hướng tiếp theo
+## 6. Bộ tài liệu tiếp theo nên dùng ra sao
 
-Nếu tiếp tục phát triển tài liệu hoặc sản phẩm từ repo này, hướng phù hợp nhất là:
+Thay vì dừng ở mức mô tả xu hướng, repo này giờ nên được dùng như một chuỗi tài liệu triển khai:
 
-- xây một blueprint triển khai 90 ngày
-- mô tả kiến trúc tham chiếu cho startup hoặc doanh nghiệp
-- định nghĩa security baseline cho AI agent
-- thiết kế bộ chỉ số đo hiệu quả vận hành của AI OS
+- file hiện tại: trả lời **AI OS là gì**, phạm vi thực tế nằm ở đâu, vì sao nên tiếp cận theo hướng agent platform
+- `01-kien-truc-tham-chieu.md`: trả lời **phải ghép những khối nào** để thành một AI OS có thể đưa vào môi trường thật
+- `02-lo-trinh-xay-dung.md`: trả lời **phải xây theo thứ tự nào**, đội nào làm gì, mốc nào cần chốt để ra MVP rồi lên production
+- `03-van-hanh-va-su-dung.md`: trả lời **người dùng và đội vận hành dùng hệ đó như thế nào**, quan sát gì, chặn gì, fallback ra sao
 
-Repo này hiện có thể được dùng như điểm khởi đầu để phát triển một tài liệu chiến lược hoặc một bản thiết kế kiến trúc cho AI OS hiện đại.
+Nếu cần mở rộng tiếp, nhánh tài liệu hợp lý sau bộ này là:
+
+- security baseline chi tiết cho từng nhóm tool
+- integration pattern cho CRM/ERP/helpdesk/browser/database
+- evaluation framework cho agent quality và task success
+- deployment guide cho cloud-only, hybrid và on-prem
